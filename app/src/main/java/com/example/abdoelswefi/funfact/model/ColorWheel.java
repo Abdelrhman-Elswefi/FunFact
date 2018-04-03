@@ -1,4 +1,4 @@
-package com.example.abdoelswefi.funfact;
+package com.example.abdoelswefi.funfact.model;
 
 import android.graphics.Color;
 
@@ -23,10 +23,15 @@ public class ColorWheel {
             "#f092b0", // pink
             "#b7c0c7"  // light gray
     };
-    int getColor() {
+
+    public int getColor() {
         Random random = new Random();
         int randomNumber = random.nextInt(colors.length);
         return Color.parseColor(colors[randomNumber]);
 
+    }
+
+    public int getColorAtIndex(int i) {
+        return Color.parseColor(colors[i]);
     }
 }
